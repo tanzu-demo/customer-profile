@@ -5,8 +5,8 @@ metadata:
 spec:
   memory: 800Mi
   cpu: "0.8"
-  storageClassName: standard
-  monitorStorageClassName: standard
+  storageClassName: default
+  monitorStorageClassName: default
   storageSize: 2G
   pgConfig:
     dbname: customer-database

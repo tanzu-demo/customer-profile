@@ -86,10 +86,10 @@ kubectl apply -n $APP_NAMESPACE -f ./config/app-operator/postgres-resource-claim
 
 ## Configure the Tekton testing pipeline
 
-Run this command to create a `test-mvn` pipeline:
+Run this command to create a `test` pipeline:
 
 ```
-kubectl -n $APP_NAMESPACE apply -f config/test-mvn-pipeline.yaml
+kubectl -n $APP_NAMESPACE apply -f config/test-pipeline.yaml
 ```
 
 ## Deploy the customer-profile app

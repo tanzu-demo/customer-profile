@@ -79,7 +79,7 @@ class CustomerProfileServiceTest {
     @Test
     void changeShouldUpdateNames() {
         // given
-        var customerProfileChangeRequest = new CustomerProfileChangeRequest("John", "Does");
+        var customerProfileChangeRequest = new CustomerProfileChangeRequest("John", "Does", "john.does@test.org");
 
         var id = UUID.randomUUID().toString();
         var entity = new CustomerProfileEntity().setId(id).setFirstName("Joe").setLastName("Doe").setEmail("joe.doe@test.org");
@@ -95,6 +95,7 @@ class CustomerProfileServiceTest {
         var profile = entityCaptor.getValue();
         assertThat(profile.getFirstName()).isEqualTo("John");
         assertThat(profile.getLastName()).isEqualTo("Does");
+        assertThat(profile.getEmail()).isEqualTo("john.does@test.org");
     }
 
     @Test

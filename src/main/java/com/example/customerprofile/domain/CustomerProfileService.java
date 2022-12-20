@@ -37,6 +37,7 @@ public class CustomerProfileService {
                 .map(entity -> {
                     entity.setFirstName(dto.getFirstName());
                     entity.setLastName(dto.getLastName());
+                    entity.setEmail(dto.getEmail());
                     return repository.save(entity);
                 })
                 .map(this::entityToDto);

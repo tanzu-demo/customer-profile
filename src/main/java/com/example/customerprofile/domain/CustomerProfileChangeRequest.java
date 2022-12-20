@@ -13,9 +13,13 @@ public class CustomerProfileChangeRequest {
     @NotBlank
     private final String lastName;
 
-    public CustomerProfileChangeRequest(String firstName, String lastName) {
+    @NotBlank
+    private final String email;
+
+    public CustomerProfileChangeRequest(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.email = email;
     }
 
     public String getFirstName() {
@@ -24,5 +28,9 @@ public class CustomerProfileChangeRequest {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }
